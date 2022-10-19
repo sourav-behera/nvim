@@ -1,0 +1,34 @@
+local o = vim.opt
+
+o.backup = false
+o.clipboard = 'unnamedplus'
+o.cmdheight = 2
+o.completeopt = {'menuone', 'noselect'}
+o.conceallevel = 0
+o.fileencoding = 'utf-8'
+o.hlsearch = true
+o.ignorecase = true
+o.mouse = 'a'
+o.pumheight = 10
+o.showmode = true
+o.showtabline = 2
+o.smartcase = true
+o.smartindent = true
+o.splitbelow = true
+o.splitright = true
+o.swapfile = false
+o.termguicolors = true
+o.number = true
+o.timeoutlen = 100 --time to wait for a mapped sequence to complete
+o.undofile = true
+o.updatetime = 300
+o.writebackup = false
+-- indentation
+	o.expandtab = true
+	o.autoindent = true
+	o.shiftwidth = 4
+	o.tabstop = 4
+	o.softtabstop = 4
+	o.cursorline = true
+o.scrolloff = 8
+o.sidescrolloff = 5
