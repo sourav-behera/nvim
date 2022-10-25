@@ -26,5 +26,6 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
 -- Status Line
     use 'nvim-lualine/lualine.nvim'
-
+-- Buffer line
+    use 'akinsho/bufferline.nvim'
 end)
