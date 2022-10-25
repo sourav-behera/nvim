@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
 -- Indentlines and autopairs
     use 'windwp/nvim-autopairs'
     use 'lukas-reineke/indent-blankline.nvim'
-
+-- Status Line
+    use 'nvim-lualine/lualine.nvim'
 
 end)
