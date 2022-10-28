@@ -28,4 +28,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 -- Buffer line
     use 'akinsho/bufferline.nvim'
+    
+    use 'kyazdani42/nvim-web-devicons'
+    use 'goolord/alpha-nvim'
 end)

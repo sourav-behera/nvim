@@ -7,3 +7,5 @@ require('configs.lsp')
 require('configs.cmp')
 require('configs.luasnip')
 require('configs.lualine')
+require('bufferline').setup{}
+require('configs.alpha')
