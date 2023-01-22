@@ -1,10 +1,8 @@
 return require('packer').startup(function(use)
-   -- Packer can manage itself 
+-- Packer can manage itself 
     use 'wbthomason/packer.nvim'
-    
 -- Colorscheme
     use 'catppuccin/nvim'
-    use 'navarasu/onedark.nvim'
 -- Syntax Highlighting
    use 'nvim-treesitter/nvim-treesitter'
 -- Completion
@@ -15,20 +13,21 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'saadparwaiz1/cmp_luasnip'
 -- LSP
+    use 'jose-elias-alvarez/null-ls.nvim'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     use 'onsails/lspkind.nvim' -- kind icons
 -- Snippets
     use 'rafamadriz/friendly-snippets'
     use "L3MON4D3/LuaSnip"
--- Indentlines and autopairs
+-- Utilities
     use 'windwp/nvim-autopairs'
+    use 'lewis6991/gitsigns.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
--- Status Line
+--  Interface
     use 'nvim-lualine/lualine.nvim'
--- Buffer line
+    use 'nvim-neo-tree/neo-tree.nvim'
     use 'akinsho/bufferline.nvim'
-    
     use 'kyazdani42/nvim-web-devicons'
     use 'goolord/alpha-nvim'
 end)

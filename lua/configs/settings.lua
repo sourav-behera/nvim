@@ -24,11 +24,12 @@ o.undofile = true
 o.updatetime = 300
 o.writebackup = false
 -- indentation
+    o.smarttab = true
 	o.expandtab = true
 	o.autoindent = true
-	o.shiftwidth = 4
-	o.tabstop = 4
-	o.softtabstop = 4
+	o.shiftwidth = 2
+	o.tabstop = 2
+	o.softtabstop = 2
 	o.cursorline = true
 o.scrolloff = 8
 o.sidescrolloff = 5
