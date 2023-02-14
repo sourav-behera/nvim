@@ -1,8 +1,8 @@
 require('nvim-lsp-installer').setup{}
 local lspconfig = require('lspconfig')
 local servers = {
-    'sumneko_lua',
+    'lua_ls',
     'clangd'
 }
-lspconfig.sumneko_lua.setup{}
+lspconfig.lua_ls.setup{}
 lspconfig.clangd.setup{}
