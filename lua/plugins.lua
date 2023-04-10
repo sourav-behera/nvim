@@ -26,7 +26,6 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
 --  Interface
     use 'nvim-lualine/lualine.nvim'
-    use 'nvim-neo-tree/neo-tree.nvim'
     use 'akinsho/bufferline.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'goolord/alpha-nvim'
