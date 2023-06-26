@@ -5,4 +5,12 @@ local servers = {
     'clangd'
 }
 lspconfig.lua_ls.setup{}
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup{
+  capabilities = {
+    textDocument = {
+      hover = {
+        enabled = true
+      }
+    }
+  }
+}
