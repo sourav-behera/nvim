@@ -1,18 +1,27 @@
--- Map Ctrl+h, Ctrl+j, Ctrl+k, and Ctrl+l to move the cursor in insert mode
-vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', { noremap = true })
 
--- Normal mode mappings
-vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+-- Define the keybindings
+local keybindings = {
+  -- Insert mode mappings
+  { mode = 'i', lhs = '<C-h>', rhs = '<Left>' },
+  { mode = 'i', lhs = '<C-j>', rhs = '<Down>' },
+  { mode = 'i', lhs = '<C-k>', rhs = '<Up>' },
+  { mode = 'i', lhs = '<C-l>', rhs = '<Right>' },
 
--- Insert mode mappings
-vim.api.nvim_set_keymap('i', '<A-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+  -- VSCode like block navigation
+  -- Normal mode mappings
+  { mode = 'n', lhs = '<A-j>', rhs = ':m .+1<CR>==' },
+  { mode = 'n', lhs = '<A-k>', rhs = ':m .-2<CR>==' },
 
--- Visual mode mappings
-vim.api.nvim_set_keymap('x', '<A-j>', ":m'>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('x', '<A-k>', ":m'<-2<CR>gv=gv", { noremap = true, silent = true })
+  -- Insert mode mappings
+  { mode = 'i', lhs = '<A-j>', rhs = '<Esc>:m .+1<CR>==gi' },
+  { mode = 'i', lhs = '<A-k>', rhs = '<Esc>:m .-2<CR>==gi' },
 
+  -- Visual mode mappings
+  { mode = 'x', lhs = '<A-j>', rhs = ":m'>+1<CR>gv=gv" },
+  { mode = 'x', lhs = '<A-k>', rhs = ":m'<-2<CR>gv=gv" },
+}
+
+-- Apply the keybindings
+for _, mapping in ipairs(keybindings) do
+  vim.api.nvim_set_keymap(mapping.mode, mapping.lhs, mapping.rhs, { noremap = true, silent = true })
+end
