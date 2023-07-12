@@ -8,5 +8,6 @@ require('configs.cmp')
 require('configs.luasnip')
 require('configs.lualine')
 require('bufferline').setup{}
-require('configs.alpha')
+require('configs.nvim-tree')
+--require('configs.alpha')
 require('configs.keybinds')

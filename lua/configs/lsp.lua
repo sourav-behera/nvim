@@ -2,23 +2,27 @@ require('nvim-lsp-installer').setup{}
 local lspconfig = require('lspconfig')
 local servers = {
     'lua_ls',
-    'clangd'
+    'clangd',
+    'jdtls',
+    'tsserver',
+    'eslint'
 }
-lspconfig.lua_ls.setup{}
-lspconfig.clangd.setup{
-  capabilities = {
-    textDocument = {
-      hover = {
-        enabled = true
-      }
-    }
-  }
-}
-lspconfig.gopls.setup{}
-
---for _, server in ipairs(servers) do
---  lspconfig.[server].setup(server)
---end
+--lspconfig.lua_ls.setup{}
+--lspconfig.clangd.setup{
+--  capabilities = {
+--    textDocument = {
+--      hover = {
+--        enabled = true
+--      }
+--    }
+--  }
+--}
+--lspconfig.gopls.setup{}
+--lspconfig.jdtls.setup{}
+--lspconfig.pyright.setup{}
+for _, server in ipairs(servers) do
+  lspconfig[server].setup({})
+end
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
