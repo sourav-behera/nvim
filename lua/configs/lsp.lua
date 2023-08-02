@@ -5,9 +5,9 @@ local servers = {
     'clangd',
     'jdtls',
     'tsserver',
-    'eslint'
+    'eslint',
+    'gopls'
 }
---lspconfig.lua_ls.setup{}
 --lspconfig.clangd.setup{
 --  capabilities = {
 --    textDocument = {
@@ -23,6 +23,15 @@ local servers = {
 for _, server in ipairs(servers) do
   lspconfig[server].setup({})
 end
+lspconfig.lua_ls.setup{
+  settings = {
+    Lua = {
+      diagnostics = {
+        global = {'vim'}
+      }
+    }
+  }
+}
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
