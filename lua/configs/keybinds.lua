@@ -20,7 +20,7 @@ local keybindings = {
   { mode = 'x', shortcut = '<A-j>', command = ":m'>+1<CR>gv=gv" },
   { mode = 'x', shortcut = '<A-k>', command = ":m'<-2<CR>gv=gv" },
   -- Nvim tree
-  { mode = 'n', shortcut = '<C-e>', command = ":NvimTreeToggle<CR>"}
+  { mode = 'n', shortcut = '<C-e>', command = "<cmd> NvimTreeToggle <CR>"}
 }
 
 -- Apply the keybindings

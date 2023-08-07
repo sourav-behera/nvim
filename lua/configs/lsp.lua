@@ -6,6 +6,7 @@ local servers = {
     'jdtls',
     'tsserver',
     'eslint',
+    'bashls',
     'gopls'
 }
 --lspconfig.clangd.setup{
